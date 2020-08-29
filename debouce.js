@@ -25,3 +25,16 @@ function debounce (handle, delay) {
         }, delay)
     }
 }
+
+
+// function add () {
+//     let count = 0
+//     return function () {
+//         count++
+//         console.log('count', count)
+//     }
+// }
+// let a = add()
+// a()
+// a()
+// a()

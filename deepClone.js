@@ -3,9 +3,9 @@
 // 深拷贝
 function deepClone (obj) {
     let result = Array.isArray(obj) ? [] : {}
-    if (obj && typeof obj == "object") {
+    if (obj && "object" == typeof obj) {
         for (key in obj) {
-            if (obj[key] && typeof obj[key] == 'object') {
+            if (obj[key] && 'object' == typeof obj[key]) {
                 result[key] = deepClone(obj[key])
             } else {
                 result[key] = obj[key]

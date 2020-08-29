@@ -60,22 +60,21 @@ var merge = function (nums1, m, nums2, n) {
         //   m 指针向前移动
         while (m >= 0 && nums1[m] > nums2[n]) {
 
-
-            let tem = 0
-            tem = nums1[i]
-            nums1[i] = nums1[m]
-            nums1[m] = tem
+            [nums1[i], nums1[m]] = [nums1[m], nums1[i]]
             i--
             m--
         }
-        let tem = 0
-        tem = nums1[i]
-        nums1[i] = nums2[n]
-        nums2[n] = tem
+
+        [nums1[i], nums2[n]] = [nums2[n], nums1[i]]
         n--;
         i--;
     }
 
+    console.log('num1', nums1)
+
 };
 // @lc code=end
 
+
+
+merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)
