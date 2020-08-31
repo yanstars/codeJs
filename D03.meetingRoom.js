@@ -26,9 +26,6 @@ let minRequiredMeetingsRooms = meetings => {
     console.log('stsrt', start)
     console.log('end', end)
     for (; s < n; s++) {
-
-
-        console.log(s,end[e], start[s])
         if (end[e] <= start[s]) {
             e++;
         }

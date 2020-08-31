@@ -13,7 +13,7 @@ var reverseString = function (s) {
 
 };
 
-reverseString(['a', 'b', 'c', 'd'])
+reverseString(['a', 'b', 'c', 'd', 'e'])
 
 
 

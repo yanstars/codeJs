@@ -51,6 +51,7 @@ var merge = function (nums1, m, nums2, n) {
     // let addarr = arrtem.concat(nums2.slice(0, n))
     // nums1 = addarr.sort((a, b) => { return a - b })
 
+    
     let i = nums1.length - 1;
     m--;
     n--;
@@ -59,12 +60,10 @@ var merge = function (nums1, m, nums2, n) {
         //   交互 第一个数组中有效最大值 到合适的位置
         //   m 指针向前移动
         while (m >= 0 && nums1[m] > nums2[n]) {
-
             [nums1[i], nums1[m]] = [nums1[m], nums1[i]]
             i--
             m--
         }
-
         [nums1[i], nums2[n]] = [nums2[n], nums1[i]]
         n--;
         i--;

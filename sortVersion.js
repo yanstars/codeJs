@@ -1,5 +1,6 @@
 
-var arr = ['1.1.1', '2.301.3', '0.0.1', '1.0.3', '4.4.1', '4.4.1.5'];
+// Array.prototype.sort
+let arr = ['1.1.1', '2.301.3', '0.0.1', '1.0.3', '4.4.1', '4.4.1.5'];
 arr.sort(function (a, b) { return a < b ? -1 : 1; });
 console.log('arr', arr)
 
@@ -12,6 +13,7 @@ const versionSort = version => {
         let minIndex = i;
         for (let j = i; j < temp.length; j++) {
 
+            // 比较单个版本号大小
             for (let k = 0; k < temp[j].length; k++) {
                 const current = +temp[j][k],
                     min = +temp[minIndex][k];
