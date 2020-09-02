@@ -12,11 +12,11 @@ let a = {
 function get (obj, str) {
 
     let arr = str.split(".")
-    let resut = arr.reduce((last, now, index, arr) => {
+    let result = arr.reduce((last, now) => {
         return last[now]
     }, obj)
 
-    console.log('a', resut)
+    console.log('a', result)
 
 }
 

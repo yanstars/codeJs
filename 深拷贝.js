@@ -2,6 +2,10 @@
 
 // 深拷贝
 function deepClone (obj) {
+
+    // 考虑其他各种数据类型
+    // 对象的循环引用 set
+
     let result = Array.isArray(obj) ? [] : {}
     if (obj && "object" == typeof obj) {
         for (key in obj) {
