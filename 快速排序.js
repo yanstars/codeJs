@@ -1,4 +1,4 @@
-let quick_sort = (arr, left, right) => {
+let quick_sort = (arr, left = 0, right = arr.length - 1) => {
 
     if (left >= right) return
 
@@ -34,5 +34,5 @@ let quick_sort = (arr, left, right) => {
 
 let arr = [1, 4, 2, 3, 5, 8, 3, 5]
 
-quick_sort(arr, 0, 7)
+quick_sort(arr)
 console.log('object', arr)

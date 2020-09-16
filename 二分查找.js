@@ -1,4 +1,4 @@
-const find = (arr, left, right, target) => {
+const find = (arr, target, left = 0, right = arr.length - 1,) => {
 
     if (arr.length >= 0 & arr.length <= 2) {
         if (arr[left] && arr[left] == target) {
@@ -22,8 +22,8 @@ const find = (arr, left, right, target) => {
 }
 
 
-let arr = [2, 14]
-let index = find(arr, 0, arr.length - 1, 14)
+let arr = [2, 3, 4, 5, 7, 45, 14, 8]
+let index = find(arr, 5)
 
 console.log('index', index)
 

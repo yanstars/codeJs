@@ -21,7 +21,7 @@ console.log('testArr', testArr.flat(2))
 // 递归指定维数
 
 flatten.num = 0
-function flatten (arr, deep, result = []) {
+function flatten (arr, deep = 1, result = []) {
     flatten.num++
 
     for (let item of arr) {
