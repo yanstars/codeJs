@@ -39,8 +39,8 @@
  */
 
 function ListNode (val) {
-    this.val = val;
-    this.next = null;
+    this.val = val
+    this.next = null
 }
 
 let n1 = new ListNode(1)
@@ -52,7 +52,7 @@ n1.next = n2
 n2.next = n3
 
 // log(n1)
-
+// 迭代法
 // var reverseList = function (head) {
 
 //     let temp; // 保存cur的下一个节点
@@ -69,27 +69,28 @@ n2.next = n3
 // };
 
 
+// 递归
 function reverse (pre, cur) {
-    if (cur == NULL) return pre;
-    temp = cur.next;
-    cur.next = pre;
+    if (cur == NULL) return pre
+    temp = cur.next
+    cur.next = pre
     // 可以和双指针法的代码进行对比，如下递归的写法，其实就是做了这两步
     // pre = cur;
     // cur = temp;
-    return reverse(cur, temp);
+    return reverse(cur, temp)
 }
 function reverseList (head) {
     // 和双指针法初始化是一样的逻辑
     // ListNode* cur = head;
     // ListNode* pre = NULL;
-    return reverse(NULL, head);
+    return reverse(NULL, head)
 }
 
 
 
 function log (head) {
     while (head) {
-        console.log('head.next :>> ', head.val);
+        console.log('head.next :>> ', head.val)
         head = head.next
     }
 }

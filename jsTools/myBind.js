@@ -1,0 +1,4 @@
+// call
+// bind
+// apply
+// // todo

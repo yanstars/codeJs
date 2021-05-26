@@ -35,31 +35,40 @@
  * 1.  1 阶 + 1 阶 + 1 阶
  * 2.  1 阶 + 2 阶
  * 3.  2 阶 + 1 阶
- *
+ * 
  *
  */
+// 4
+// 1 + 1 + 1 + 1
+// 2 + 2
+// 2 + 1 + 1
+// 1 + 2 + 1
+// 1 + 1 + 2
 
+
+// 1 2 3 5 8 13   n ?
 // @lc code=start
 /**
  * @param {number} n
  * @return {number}
  */
  var climbStairs = function (n) {
-  let p = 0
-  let q = 0
-  let r = 1
+  let low = 0
+  let high = 0
+  let total = 1
 
-  for (let i = 1; i <= n; ++i) {
-      p = q;
-      q = r;
-      r = p + q;
+   for (let i = 1; i <= n; ++i) {
+    console.log('i :>> ', i);
+      low = high;
+      high = total;
+      total = low + high;
   }
-  return r;
+  return total;
 
   // 函数递归调用超时了
 };
 
-const num = 50
+const num = 15
 
 let result = climbStairs(num)
 
@@ -67,18 +76,18 @@ let result = climbStairs(num)
 
 
 
-const func = (n) => {
-  if (n <= 3) {
-      return n
-  } else {
-      return func(n - 2) + func(n - 1)
-  }
-}
+// const func = (n) => {
+//   if (n <= 3) {
+//       return n
+//   } else {
+//       return func(n - 2) + func(n - 1)
+//   }
+// }
 
 
 
 
-result = func(num)
+// result = func(num)
 
 console.log('result :>> ', result);
 

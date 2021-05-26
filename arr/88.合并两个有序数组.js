@@ -44,6 +44,10 @@
  * @param {number} n
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
+
+// TODO   合并数组 并排序
+// TODO   新建数组 arr1 arr2 从前至后比较并push进arr0
+//    在arr1 末尾逆序比较最大值 append进arr1
 var merge = function (nums1, m, nums2, n) {
 
 
@@ -51,10 +55,10 @@ var merge = function (nums1, m, nums2, n) {
     // let addarr = arrtem.concat(nums2.slice(0, n))
     // nums1 = addarr.sort((a, b) => { return a - b })
 
-    
-    let i = nums1.length - 1;
-    m--;
-    n--;
+
+    let i = nums1.length - 1
+    m--
+    n--
     while (n >= 0) {
         //   如果一个数组指针对应的数比  第二个数组的指针对应的数字大
         //   交互 第一个数组中有效最大值 到合适的位置
@@ -65,13 +69,13 @@ var merge = function (nums1, m, nums2, n) {
             m--
         }
         [nums1[i], nums2[n]] = [nums2[n], nums1[i]]
-        n--;
-        i--;
+        n--
+        i--
     }
 
     console.log('num1', nums1)
 
-};
+}
 // @lc code=end
 
 
