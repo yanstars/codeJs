@@ -55,7 +55,6 @@ var twoSum = function (nums, target) {
     //             return [i, j]
     //         }
     //     }
-
     //   }
 
 
@@ -70,6 +69,17 @@ var twoSum = function (nums, target) {
     }
 
 
-};
+    //TODO  有序数组  二分查找  
+    //    for(let i ){
+    //        let j  // 查找对象
+    //    }
+    // 
+
+    
+    //TODO  有序数组  头尾双指针
+
+
+
+}
 // @lc code=end
 
