@@ -1,46 +1,26 @@
-let quick_sort = (arr, left = 0, right = arr.length - 1) => {
+//快速排序
+function quick_sort (arr, l, r) {
 
-    if (left >= right) return
+console.log(arr.toString())
 
-    let i = left
-    let j = right - 1
-    let temp = arr[right]  // 标量
-
-
-    while (i < j) {
-        while (arr[i] <= temp && i < j) {
-
-            // 
-            i++
+    if (l < r) {
+        let i = l, j = r, tmp = arr[l]
+        while (i < j) {
+            while (i < j && arr[j] >= tmp) j--
+            if (i < j) {
+                arr[i++] = arr[j]
+            }
+            while (i < j && arr[i] < tmp) i++
+            if (i < j) {
+                arr[j--] = arr[i]
+            }
         }
-        // 找到左边一个大于tem的元素
-        while (arr[j] > temp && i < j) {
-            // 使得j扫过的元素都大于temp
-            j--
-        }
-        // 找到右边第一个小于temp的元素
-        if (i < j) {
-            let temp = arr[i]
-            arr[i] = arr[j]
-            arr[j] = temp
-        }
-        //  互换位置 如果哦i<j 继续扫描
+        arr[i] = tmp
+        quick_sort(arr, l, i - 1) // 递归调用 
+        quick_sort(arr, i + 1, r)
     }
-
-
-    arr[right] = arr[i]
-    arr[i] = temp
-    // 将temp放到i的位置
-
-    // 分治 i左右的数组 递归处理
-
-    quick_sort(arr, left, i - 1)
-    quick_sort(arr, i + 1, right)
-
 }
 
+let arr = [1, 3, 4, 9, 8, 3, 2, 7, 5]
 
-let arr = [1, 4, 2, 3, 5, 8, 3, 5]
-
-quick_sort(arr)
-console.log('object', arr)
+quick_sort(arr, 0, arr.length - 1)
