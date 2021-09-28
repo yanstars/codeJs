@@ -1,5 +1,8 @@
 var res = [];
+let c = 0 
 function permutation (arr, len, index) {
+    c++
+    console.log(c)
     if (len == index) {
         res.push(arr.slice());
     }
@@ -7,10 +10,11 @@ function permutation (arr, len, index) {
         [arr[i], arr[index]] = [arr[index], arr[i]];
         permutation(arr, len, index + 1);
         [arr[i], arr[index]] = [arr[index], arr[i]];
+       
     }
 }
 permutation([1, 2, 3], 3, 0);
-console.log(res);
+// console.log(res);
 
 // function permutation (arr) {
 //     if (arr.length == 1)

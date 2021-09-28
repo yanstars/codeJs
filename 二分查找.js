@@ -1,6 +1,6 @@
 const find = (arr, target, left = 0, right = arr.length - 1,) => {
 
-    if (arr.length >= 0 & arr.length <= 2) {
+    if (arr.length >= 0 && arr.length <= 2) {
         if (arr[left] && arr[left] == target) {
             return left
         } else if (arr[right] && arr[right] == target) {
