@@ -1,3 +1,6 @@
+// https://blog.csdn.net/Jioho_chen/article/details/117886350
+// https://juejin.cn/post/7041515221625602055
+
 class LimitPromise {
   constructor (max) {
     this._max = max
